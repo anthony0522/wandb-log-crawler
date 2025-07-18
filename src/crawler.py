@@ -21,7 +21,7 @@ logging.basicConfig(
     ]
 )
 
-class DatatimeHandler():
+class DatetimeHandler():
     DATETIME_FORMAT = '%Y-%m-%dT%H:%M:%S.%f'
     
     @classmethod
@@ -49,7 +49,7 @@ class WandbLogCrawler:
         self.store_path = store_path or STORE_PATH
         self.frequency = frequency
         self.__check_store_path()
-        self.datetime_handler = DatatimeHandler()
+        self.datetime_handler = DatetimeHandler()
 
     def __check_store_path(self):
         if not os.path.exists(self.store_path):
